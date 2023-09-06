@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+    <body>
+        <h1>Main page</h1>
+        <div class="form">
+            <form method="post" action="write/">
+                {% csrf_token %}
+                {{ forma }}
+                <input type="submit" value="Save" class="button">
+            </form>
+        </div>
+
+        <div class="form_2">
+            <h2>Our car's list</h2>
+            <table>
+                <tr><th>ID</th><th>Model</th><th>Country</th><th>Year</th><th>Number</th></tr>
+                {% for auto in base %}
+                    <tr>
+                        <td>{{ auto.id }}</td>
+                        <td>{{ auto.auto_model }}</td>
+                        <td>{{ auto.auto_country }}</td>
+                        <td>{{ auto.auto_year }}</td>
+                        <td>{{ auto.auto_number }}</td>
+                        <td><a href="{% url 'delete' auto.id %}">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, cadetblue, coral);
+    width: 300px;
+    height: 300px;
+    border: 2px solid crimson;
+    border-radius: 15px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form input{
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+    margin-top: 3px;
+}
+input:focus-visible{
+    text-align: center;
+    background-color: lightblue;
+    color: darkred;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: darkred;
+    font-size: 16px;
+}
+table td{
+    padding: 10px;
+    width: auto;
+    border: 1px dotted #ccc;
+    text-align: center;
+    background-color: burlywood;
+}
+button, .button{
+    width: 100px;
+    background-color: coral;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+button:hover, .button:hover{
+    cursor: pointer;
+    background-color: crimson;
+    color: #fff;
+}
